@@ -3,13 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStoreApi", "OnlineStoreApi\OnlineStoreApi.csproj", "{43D9CE71-A0D0-4EB2-BE16-EA4D93180B55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineStoreApi", "OnlineStoreApi\OnlineStoreApi.csproj", "{43D9CE71-A0D0-4EB2-BE16-EA4D93180B55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Interfaces", "Services.Interfaces\Services.Interfaces.csproj", "{AAF05FF0-631A-4913-A00E-3419899F1CFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.Interfaces", "Services.Interfaces\Services.Interfaces.csproj", "{AAF05FF0-631A-4913-A00E-3419899F1CFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Impl", "Services.Impl\Services.Impl.csproj", "{12893298-FEA4-4442-8052-F22B28A22A15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.Impl", "Services.Impl\Services.Impl.csproj", "{12893298-FEA4-4442-8052-F22B28A22A15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.Model", "OnlineStore.Model\OnlineStore.Model.csproj", "{2FCD6F64-142B-41FE-A9F7-937098409F89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineStore.Model", "OnlineStore.Model\OnlineStore.Model.csproj", "{2FCD6F64-142B-41FE-A9F7-937098409F89}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineStore.Repo.Interfaces", "OnlineStore.Repo.Interfaces\OnlineStore.Repo.Interfaces.csproj", "{507784BF-59DE-4DA9-89A7-FBDC4B72DDA7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineStore.Repo.Impl", "OnlineStore.Repo.Impl\OnlineStore.Repo.Impl.csproj", "{62D60DD6-13BF-4941-9028-6FD9D6245B0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.DataAccess", "OnlineStore.DataAccess\OnlineStore.DataAccess.csproj", "{FA912E01-CB1B-48ED-BACC-B2FE0AE72668}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +39,18 @@ Global
 		{2FCD6F64-142B-41FE-A9F7-937098409F89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FCD6F64-142B-41FE-A9F7-937098409F89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FCD6F64-142B-41FE-A9F7-937098409F89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{507784BF-59DE-4DA9-89A7-FBDC4B72DDA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{507784BF-59DE-4DA9-89A7-FBDC4B72DDA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{507784BF-59DE-4DA9-89A7-FBDC4B72DDA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{507784BF-59DE-4DA9-89A7-FBDC4B72DDA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62D60DD6-13BF-4941-9028-6FD9D6245B0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62D60DD6-13BF-4941-9028-6FD9D6245B0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62D60DD6-13BF-4941-9028-6FD9D6245B0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62D60DD6-13BF-4941-9028-6FD9D6245B0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA912E01-CB1B-48ED-BACC-B2FE0AE72668}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA912E01-CB1B-48ED-BACC-B2FE0AE72668}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA912E01-CB1B-48ED-BACC-B2FE0AE72668}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA912E01-CB1B-48ED-BACC-B2FE0AE72668}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
