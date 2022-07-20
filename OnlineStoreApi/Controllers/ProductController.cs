@@ -9,12 +9,16 @@ namespace OnlineStoreApi.Controllers {
   public class ProductController : ControllerBase 
    {
     private readonly IProductInterface _productService;
-    public ProductController(IProductInterface productService) {
+    private readonly OnlineStoreContext _onlineStoreContext;
+    public ProductController(IProductInterface productService, OnlineStoreContext onlineStoreContext) {
       _productService = productService;
+      _onlineStoreContext = onlineStoreContext;
     }
     [HttpGet("products")]
     public async Task<IActionResult> GetProducts() {
-      var result = await _productService.GetProducts();
+      //var result = await _productService.GetProducts();
+      //return Ok(result);
+      var result = _onlineStoreContext.Set<Product>().ToList();
       return Ok(result);
     }
     [HttpPut("createProduct")]

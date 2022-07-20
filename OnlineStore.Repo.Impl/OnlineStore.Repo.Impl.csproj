@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\OnlineStore.Model\OnlineStore.Model.csproj" />
     <ProjectReference Include="..\OnlineStore.Repo.Interfaces\OnlineStore.Repo.Interfaces.csproj" />
+    <ProjectReference Include="..\OnlineStoreApi\OnlineStoreApi.csproj" />
   </ItemGroup>
 
 </Project>
