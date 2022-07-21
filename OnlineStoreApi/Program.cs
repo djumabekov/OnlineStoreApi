@@ -23,6 +23,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddTransient<IProductInterface, ProductService>();
+builder.Services.AddTransient<IManagerInterface, ManagerService>();
 
 var app = builder.Build();
 
