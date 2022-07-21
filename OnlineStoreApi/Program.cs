@@ -6,6 +6,8 @@ using Microsoft.Identity.Web;
 using Services.Impl;
 using Services.Interfaces;
 using OnlineStoreApi;
+using OnlineStore.Repo.Interfaces;
+using OnlineStore.Repo.Impl;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +26,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddTransient<IProductInterface, ProductService>();
 builder.Services.AddTransient<IManagerInterface, ManagerService>();
+builder.Services.AddTransient<IUserRepository, UserRepository>();
 
 var app = builder.Build();
 
