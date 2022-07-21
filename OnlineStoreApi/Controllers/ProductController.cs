@@ -25,7 +25,9 @@ namespace OnlineStoreApi.Controllers {
     }
     [HttpPut("createProduct")]
     public async Task<IActionResult> CreateProduct([FromBody] Product product){
-      throw new NotImplementedException();
+      _onlineStoreContext.Add(product);
+      _onlineStoreContext.SaveChanges();
+      return Ok(product);
     }
 
     [HttpPost("updateProduct")]
