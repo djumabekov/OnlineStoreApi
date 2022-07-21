@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OnlineStore.Model;
 using Services.Interfaces;
 
 namespace OnlineStoreApi.Controllers {
+  //[Authorize(AuthenticationSchemes = "Bearer", Roles = "ClientsUser")]
   [Route("api/[controller]")]
   [ApiController]
   public class ProductController : ControllerBase 

@@ -31,6 +31,7 @@ namespace OnlineStoreApi.Controllers {
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginModel loginModel) {
       var user = await _userRepository.GetUserByUserName(loginModel.UserName);
+
       if (user.Password == loginModel.Password) {
         var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("HSFVBHASTGSHDVASDS"));
         var signinCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
@@ -42,8 +43,8 @@ namespace OnlineStoreApi.Controllers {
             };
 
         var tokeOptions = new JwtSecurityToken(
-            "https://localhost:7062",
-            "https://localhost:7062",
+            "https://localhost:7125",
+            "https://localhost:7125",
             claims,
             expires: DateTime.Now.AddDays(30),
             signingCredentials: signinCredentials
