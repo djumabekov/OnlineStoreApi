@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace OnlineStore.Repo.Interfaces {
   public interface IManagerRepository {
-    Task<Manager> GetManagerById(int id);
-    Task<List<Manager>> GetManagers(int? top = null);
-    Task<int> InsertManager(Manager manager);
-    Task UpdateManager(Manager manager);
-    Task DeleteManager(int id);
+    public Task<Manager> GetManagerById(int id);
+    public Task<List<Manager>> GetManagers(int? top = null);
+    public Task<Manager> GetManagerByManagerName(string userName);
+    public Task<int> InsertManager(Manager manager);
+    public Task UpdateManager(Manager manager);
+    public Task DeleteManager(int id);
   }
 }

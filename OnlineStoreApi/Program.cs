@@ -66,6 +66,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddTransient<IProductInterface, ProductService>();
 builder.Services.AddTransient<IManagerInterface, ManagerService>();
 builder.Services.AddTransient<IUserRepository, UserRepository>();
+builder.Services.AddTransient<IManagerRepository, ManagerRepository>();
 
 
 

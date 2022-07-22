@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace OnlineStore.Repo.Impl {
   public class UserRepository : IUserRepository {
 
-    private const string connectionString = "Server=610-08;Database=OnlineStoreDb;Trusted_Connection=True;TrustServerCertificate=True";
+    private const string connectionString = "Server=LAPTOP-66IDD8T0\\SQLEXPRESS;Database=OnlineStoreDb;Trusted_Connection=True;TrustServerCertificate=True";
     //public UserRepository(string connectionString) {
     //  _connectionString = connectionString;
     //}

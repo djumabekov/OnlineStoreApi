@@ -5,7 +5,7 @@ using OnlineStore.Model;
 using Services.Interfaces;
 
 namespace OnlineStoreApi.Controllers {
-  //[Authorize(AuthenticationSchemes = "Bearer", Roles = "ClientsUser")]
+  [Authorize(AuthenticationSchemes = "Bearer", Roles = "clientsUser")]
   [Route("api/[controller]")]
   [ApiController]
   public class ProductController : ControllerBase 
@@ -32,7 +32,31 @@ namespace OnlineStoreApi.Controllers {
 
     [HttpPost("updateProduct")]
     public async Task<IActionResult> UpdateProduct([FromBody] Product product) {
-      throw new NotImplementedException();
+      var result = _onlineStoreContext.Set<Product>().Where(x=>x.Id == product.Id).FirstOrDefault();
+
+      if (result != null)
+      {
+        result.Name = product.Name;
+        result.Price = product.Price;
+        result.Description = product.Description;
+        _onlineStoreContext.SaveChanges();
+        return Ok(result);
+      }
+      return NoContent();
+    }
+
+    [HttpPost("deleteProduct")]
+    public async Task<IActionResult> DeleteProduct(int id)
+    {
+      var result = _onlineStoreContext.Set<Product>().Where(x => x.Id == id).FirstOrDefault();
+
+      if (result != null)
+      {
+        _onlineStoreContext.Remove(result);
+        _onlineStoreContext.SaveChanges();
+        return Ok(result);
+      }
+      return NoContent();
     }
   }
 }
